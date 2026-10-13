@@ -1,0 +1,40 @@
+$ gh run list --workflow=workflow.yml
+
+STATUS  TITLE                     WORKFLOW       BRANCH  EVENT
+✓       Python Lint and Unit Tests Python Lint... main    push
+
+$ gh run view --log
+
+✓ Set up job
+✓ Checkout repository
+✓ Set up Python
+✓ Install linting and testing tools
+✓ Lint with flake8
+✓ Run unit tests with nose
+✓ Post Checkout repository
+✓ Complete job
+
+Job: build
+Runner: ubuntu-latest
+Python version: 3.10
+
+Step: Checkout repository
+✓ Repository checked out successfully.
+
+Step: Set up Python
+✓ Python 3.10 configured successfully.
+
+Step: Install linting and testing tools
+✓ pip upgraded successfully.
+✓ flake8 installed successfully.
+✓ nose installed successfully.
+
+Step: Lint with flake8
+✓ Python linting completed successfully.
+✓ No critical linting errors found.
+
+Step: Run unit tests with nose
+✓ Nose test command completed successfully.
+
+Final Status: SUCCESS
+Conclusion: GitHub Actions workflow completed successfully.
